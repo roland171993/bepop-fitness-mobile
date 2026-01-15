@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Bepop Fitness</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Bepop Fitness</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+            	<string>This app uses Bluetooth to discover and connect to nearby devices.</string>
+            	<key>NSBonjourServices</key>
+            	<array>
+            		<string>_CC1AD845._googlecast._tcp</string>
+            		<string>_googlecast._tcp</string>
+            	</array>
+            <key>NSLocalNetworkUsageDescription</key>
+            	<string>This app needs access to your local network to connect to casting devices.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1026272280935-6ictliv7nobebj4fqgpc4i10cj93ik2u</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3940256099942544~3347511713</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Bepop Fitness app requires access to the Camera to upload your Profile photo.</string>
+	<key>NSHealthShareUsageDescription</key>
+    <string>We will sync your data with the Apple Health app to give you better insights</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>We will sync your data with the Apple Health app to give you better insights</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Bepop Fitness uses your location to provide accurate parcel tracking and timely delivery updates. By accessing your address, we ensure that you receive real-time information about your parcels' status and estimated delivery times.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Bepop Fitness uses your location to provide accurate parcel tracking and timely delivery updates. By accessing your address, we ensure that you receive real-time information about your parcels' status and estimated delivery times.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Bepop Fitness uses your location to provide accurate parcel tracking and timely delivery updates. By accessing your address, we ensure that you receive real-time information about your parcels' status and estimated delivery times.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The Bepop Fitness app uses your device's microphone to enhance your fitness experience. We utilize voice commands for guided workouts, enabling you to interact with the app hands-free. Your microphone is also used for recording workout notes and feedback. We respect your privacy and do not store any audio without your consent.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Bepop Fitness application tracks your steps</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Bepop Fitness requires access to the photo library to upload your Profile photo.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Bepop Fitness requires access to the photo library to upload your Profile photo.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>We use speech recognition to provide voice-controlled workout instructions and track your progress during workouts in the Bepop Fitness app. Access to the microphone is required to ensure accurate and convenient voice interactions with the app.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>FlutterDeepLinkingEnabled</key>
+    <true/>
+	<key>com.apple.developer.associated-domains</key>
+    	<array>
+    		<string>applinks:app.meetmighty.com</string>
+    	</array>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
+
+</dict>
+</plist>

@@ -1,0 +1,96 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+    id("com.google.firebase.crashlytics") version "2.9.9" apply false
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+
+android {
+    compileSdkVersion 36
+    ndkVersion "29.0.14033849"
+    buildToolsVersion "36.0.0"
+    namespace "com.roland.assoh.bepopfitness.saas"
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId "com.roland.assoh.bepopfitness.saas"
+        minSdkVersion 26
+        targetSdkVersion 36
+        versionCode 14
+        versionName "1.3.1"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+          //  proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "BepopFitness-${variant.versionCode}-${variant.versionName}.apk"
+        }
+    }
+
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // Firebase BOM
+    implementation platform("com.google.firebase:firebase-bom:32.7.2")
+    // Firebase dependencies
+    implementation "com.google.firebase:firebase-auth"
+    implementation "com.google.android.gms:play-services-auth:20.7.0"
+    implementation 'com.google.android.gms:play-services-ads:22.6.0'
+
+    // Firebase Analytics
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation "com.google.firebase:firebase-analytics-ktx"
+    implementation "com.google.firebase:firebase-analytics"
+    implementation 'androidx.multidex:multidex:2.0.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation 'androidx.window:window:1.0.0'
+    implementation 'androidx.window:window-java:1.0.0'
+
+    implementation 'com.google.android.gms:play-services-cast-framework:21.3.0'
+
+}
